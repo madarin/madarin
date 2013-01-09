@@ -4,4 +4,19 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+      <servlet>
+        <servlet-name>xxoo</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>xxoo</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <!-- ViewResolver -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    <property name="prefix" value="/jsp/"/>
+    <property name="suffix" value=".jsp"/>
+</bean>
 </web-app>

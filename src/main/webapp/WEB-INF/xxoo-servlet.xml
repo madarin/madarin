@@ -1,0 +1,6 @@
+<!-- HandlerMapping -->
+<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+ 
+<!-- HandlerAdapter -->
+<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+<bean name="/hello" class="cn.javass.chapter2.web.controller.HelloWorldController"/> 

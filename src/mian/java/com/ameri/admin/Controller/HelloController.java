@@ -4,10 +4,13 @@ package com.ameri.admin.Controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-public class HelloController implements Controller{
-
+@Controller
+@RequestMapping("/Hello")
+public class HelloController{
+@RequestMapping("/index")
 public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse resp) throws Exception {  
     //1、收集参数、验证参数  
     //2、绑定参数到命令对象  
@@ -20,5 +23,12 @@ public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse re
     mv.setViewName("hello");  
     return mv;  
  }
+@RequestMapping("/xxoo")
+public ModelAndView xxoo(){
+	ModelAndView mv = new ModelAndView();
+	mv.addObject("xxoo", "madarin");
+	mv.setViewName("hello");
+	return mv;
+}
 
 }
